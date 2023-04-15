@@ -1,0 +1,57 @@
+section#intro{
+    max-width: 780px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+
+}
+section#intro p{
+    color: #fff;
+    font-size: 1.8rem;
+    text-align: left;
+    opacity: 0;
+    transition: all .3s linear;
+    position: relative;
+    top: -50px;
+
+}
+section#intro.visible p{
+    opacity: 1;
+    top: 0;
+}
+section#intro a{
+    border: 3px solid $gold;
+    border-radius: 7px;
+    color: $gold;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1.4rem;
+    opacity: 0;
+    transition: all .3s linear;
+    position: relative;
+    bottom: -50px;
+}
+section#intro.visible a{
+    opacity: 1;
+    bottom: 0;
+}
+section#intro img{
+    max-width: 300px;
+    padding-top: 20px;
+    opacity: 0;
+}
+section#intro.visible img{
+    opacity: 1;
+    transition:opacity .5s linear;
+}
+section#intro span{
+    color: #FAC86B;
+    font-family: 'Source Serif Pro', serif;
+    font-size: 3.2rem;
+    font-weight: 600;
+    line-height: 2.6rem;
+}
