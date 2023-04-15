@@ -1,13 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Intro from "/..components/Intro";
-import About from "/..components/About";
-import Header from "/..components/Header";
-import Skills from "/..components/Skills";
-import Portfolio from "/..components/Portfolio";
-import Experience from "/..components/Experience";
-import Contact from "/..components/Contact";
-import Footer from "/..components/Footer";
+import Intro from "../components/Intro";
+import About from "../components/About";
+import Header from "../components/Header";
+import Skills from "../components/Skills";
+import Portfolio from "../components/Portfolio";
+import Experience from "../components/Experience";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 import {useEffect} from "react";
 
  
