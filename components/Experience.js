@@ -12,7 +12,7 @@ export default function Experience() {
             </div>
             <div className="texts">
               <h3>Head Graphic Designer</h3>
-              <h4>TFOP</h4>
+              <h4>The Fountain of Praise</h4>
               <h4>Houston, Texas</h4>
               <p>Responsible for creating visually stunning designs that effectively communicate a message or idea to a target audience. Using knowledge of design principles and software I collaborate with cross-functional teams to create graphics, layouts, and other visual elements for digital and print media. My portfolio showcases my mastery of typography, color theory, and composition, and demonstrates my ability to think creatively and strategically to solve design challenges.</p>
             </div>
