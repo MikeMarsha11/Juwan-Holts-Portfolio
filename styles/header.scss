@@ -42,30 +42,24 @@ header img{
     max-width: 100px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 375px) {
     header {
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 10px 20px;
+      padding-top: 10px;
     }
-
-    header img {
-        max-width: 80px;
-    }
-
+    
     header nav {
-        order: 1;
-        width: 100%;
-        margin-top: 20px;
+      text-align: left;
     }
-
+    
     header div.social {
-        order: 2;
-        width: 100%;
-        justify-content: center;
+      margin-top: 10px;
     }
-
+    
     header div.social a {
-        margin: 0 5px;
+      margin: 0 5px;
     }
-}
+    
+    header img {
+      max-width: 80px;
+    }
+  }

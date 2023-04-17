@@ -48,27 +48,22 @@ section#contact {
     }
   }
 }
-
-@media only screen and (min-width: 768px) {
-  section#contact div.box {
+@media only screen and (max-width: 414px) {
+  section#contact h2 {
     width: 280px;
-    display: inline-flex;
-    align-items: center;
-    margin-top: 10px;
-    opacity: 0;
-
-    @for $i from 1 through 20 {
-      &:nth-child(#{$i + 1}) {
-        transition-delay: #{$i * 0.1s};
-      }
-    }
-
-    &:hover {
-      transform: translateY(-5px);
-    }
+    margin-left: -140px;
   }
-
-  section#contact.visible div.box {
-    opacity: 1;
+  
+  div.box {
+    width: 90%;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+  }
+  
+  div.box svg {
+    height: 25px;
+    margin-right: 10px;
   }
 }

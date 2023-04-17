@@ -1,84 +1,88 @@
 section#experience{
-  h2{
-    position:relative;
-    top:-25px;
-  }
-  .timeline{
-    .item{
-      display:flex;
-      opacity:0;
-      transition:all 0.3s ease-in-out;
-      position: relative;
-      top:-50px;
-      @for $i from 1 through 20 {
-        &:nth-child(#{$i + 1}){transition-delay: #{$i  * .3s}};
-      }
-      .date{
-        padding-right:15px;
+
+    h2{
+      position:relative;
+      top:-25px;
+    }
+  
+    .timeline{
+      .item{
         display:flex;
+        opacity:0;
+        transition:all 0.3s ease-in-out;
         position: relative;
-        span.year{
-          background-color: #5C5D61;
-          padding: 0px 10px;
-          height: 30px;
-          display:inline-block;
-          line-height:30px;
+        top:-50px;
+        @for $i from 1 through 20 {
+          &:nth-child(#{$i + 1}){transition-delay: #{$i  * .3s}};
         }
-        span.arrow{
-          display: inline-block;
-          width: 0;
-          height: 0;
-          border-style: solid;
-          border-width: 15px 0 15px 10px;
-          border-color: transparent transparent transparent #5c5d61;
+        .date{
+          padding-right:15px;
+          display:flex;
+          position: relative;
+          span.year{
+            background-color: #5C5D61;
+            padding: 0px 10px;
+            height: 30px;
+            display:inline-block;
+            line-height:30px;
+          }
+          span.arrow{
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 15px 0 15px 10px;
+            border-color: transparent transparent transparent #5c5d61;
+          }
         }
-      }
-      .separator{
-        display:flex;
-        flex-direction: column;
-        .dot{
-          width: 30px;
-          height: 30px;
-          background-color: $gold;
-          border-radius: 50%;
-          box-shadow: 0px 0px 20px $gold;
+  
+  
+        .separator{
+          display:flex;
+          flex-direction: column;
+          .dot{
+            width: 30px;
+            height: 30px;
+            background-color: $gold;
+            border-radius: 50%;
+            box-shadow: 0px 0px 20px $gold;
+          }
+          .line{
+            min-height: 10px;
+            width:2px;
+            background-color:#fff;
+            flex-grow: 1;
+            margin-left: 14px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            transition: all 0.5s ease-in-out;
+            max-height: 0;
+          }
         }
-        .line{
-          min-height: 10px;
-          width:2px;
-          background-color:#fff;
-          flex-grow: 1;
-          margin-left: 14px;
-          margin-top: 30px;
-          margin-bottom: 30px;
-          transition: all 0.5s ease-in-out;
-          max-height: 0;
-        }
-      }
-      .texts{
-        padding-left: 40px;
-        padding-bottom: 40px;
-        h3{
-          font-size:1.7rem;
-          font-weight:normal;
-        }
-        h4{
-          margin-top:6px;
-          margin-bottom: 6px;
-          font-weight:normal;
-          font-size: 1.4rem;
-        }
-        p{
-          color:rgba(255,255,255,0.55);
-          line-height:1.3rem;
-          margin-top: 10px;
+  
+        .texts{
+          padding-left: 40px;
+          padding-bottom: 40px;
+          h3{
+            font-size:1.7rem;
+            font-weight:normal;
+          }
+          h4{
+            margin-top:6px;
+            margin-bottom: 6px;
+            font-weight:normal;
+            font-size: 1.4rem;
+          }
+          p{
+            color:rgba(255,255,255,0.55);
+            line-height:1.3rem;
+            margin-top: 10px;
+          }
         }
       }
     }
   }
-}
-
-@media only screen and (min-width: 768px) {
+  
   section#experience.visible div.timeline div.item{
     opacity:1;
     top:0;
@@ -95,4 +99,62 @@ section#experience{
   section#experience.visible div.timeline div.item .line{
     max-height:200px;
   }
-}
+  @media only screen and (max-width: 767px) {
+    section#experience {
+  
+      h2{
+        top: 0;
+      }
+  
+      .timeline{
+        .item{
+          top: 0;
+  
+          .date{
+            span.year{
+              height: auto;
+              line-height: normal;
+              padding: 5px 10px;
+              margin-right: 10px;
+              margin-bottom: 10px;
+            }
+            span.arrow{
+              display: none;
+            }
+          }
+  
+          .separator{
+            .dot{
+              width: 15px;
+              height: 15px;
+              box-shadow: 0px 0px 10px $gold;
+            }
+            .line{
+              margin-left: 0;
+              margin-top: 20px;
+              margin-bottom: 20px;
+            }
+          }
+  
+          .texts{
+            padding-left: 30px;
+            padding-bottom: 30px;
+            h3{
+              font-size:1.4rem;
+            }
+            h4{
+              font-size: 1.1rem;
+            }
+            p{
+              font-size: 1rem;
+              margin-top: 5px;
+            }
+          }
+        }
+      }
+    }
+  
+    section#experience.visible div.timeline div.item .line{
+      max-height: 1000px;
+    }
+  }

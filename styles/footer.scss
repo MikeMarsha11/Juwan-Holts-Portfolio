@@ -39,15 +39,14 @@ footer h2 {
   font-weight: normal;
   font-size: 2rem;
 }
-
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 767px) {
   footer {
     flex-direction: column;
-    padding: 50px 20px;
+    padding: 30px 20px;
   }
 
   footer div.social {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   footer div.social div.links {
@@ -58,11 +57,12 @@ footer h2 {
   }
 
   footer div.social div.links a {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 1rem;
   }
 
-  footer div.social .line {
-    display: none;
+  footer h2 {
+    font-size: 1.5rem;
   }
 }
