@@ -1,30 +1,68 @@
-footer{
-    background: #31333B;
-    div.social{
-      display:flex;
-      svg{
-        height:25px;
-        fill:#fff;
-      }
-      div.links{
-        padding: 0 50px;
-        a{
-          position: relative;
-          top: -10px;
-          padding: 0 6px;
-        }
-      }
-      .line{
-        flex-grow: 1;
-        border-top: 2px solid $gold;
-      }
-    }
-    h2{
-      margin-bottom: 0;
-      text-align: center;
-      padding: 50px 0;
-      color: $gold;
-      font-weight:normal;
-      font-size:2rem;
-    }
+footer {
+  background: #31333B;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 100px;
+}
+
+footer div.social {
+  display: flex;
+  align-items: center;
+}
+
+footer div.social svg {
+  height: 25px;
+  fill: #fff;
+}
+
+footer div.social div.links {
+  margin-left: 20px;
+}
+
+footer div.social div.links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 1.2rem;
+}
+
+footer div.social .line {
+  flex-grow: 1;
+  border-top: 2px solid $gold;
+}
+
+footer h2 {
+  margin-bottom: 0;
+  color: $gold;
+  font-weight: normal;
+  font-size: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  footer {
+    flex-direction: column;
+    padding: 50px 20px;
   }
+
+  footer div.social {
+    margin-bottom: 30px;
+  }
+
+  footer div.social div.links {
+    margin-left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  footer div.social div.links a {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  footer div.social .line {
+    display: none;
+  }
+}

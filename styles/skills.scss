@@ -2,14 +2,17 @@ section#skills{
     background-color: #31333B;
     padding-bottom: 100px;
 }
+
 section#skills h2{
     text-align: center; 
 }
+
 .skills-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px; 
 }
+
 .skill-box{
     background-color: #3D3E42;
     padding: 40px;
@@ -20,13 +23,16 @@ section#skills h2{
     position: relative;
     left: -20px;
 } 
+
 span{
     display: block;
 }
+
 .skills-container.visible .skill-box{
     opacity: 1;
     left: 0;
 }
+
 .skill-box:nth-child(2){transition-delay:.2s};
 
 @for $i from 1 through 20 {
@@ -37,4 +43,38 @@ span{
     display: inline-block;
     margin-bottom: 10px;
     max-width: 60px;
-} 
+}
+
+/* Mobile version */
+@media only screen and (min-width: 768px) {
+
+    section#skills{
+        background-color: #31333B;
+        padding-bottom: 100px;
+    }
+
+    .skills-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px; 
+    }
+
+    .skill-box{
+        max-width: 200px;
+        margin: 0 auto;
+        opacity: 1;
+        left: 0;
+    }
+
+    .skill-box:nth-child(2){transition-delay: 0s;}
+
+    @for $i from 1 through 20 {
+        .skill-box:nth-child(#{$i + 2}){transition-delay: #{$i * .1s}};
+    }
+
+    .skill-box img{
+        margin: 0 auto 10px;
+        max-width: 100%;
+    }
+}
