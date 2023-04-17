@@ -3,7 +3,7 @@ export default function Header() {
             <header> 
               <img src="/img/logo.png" alt="logo"/>
               <nav>
-                <a href="#about">About Me</a> 
+                <a href="#about">About</a> 
                 <a href="#portfolio">Portfolio</a>
                 <a href="#contact">Contact</a>
               </nav>
