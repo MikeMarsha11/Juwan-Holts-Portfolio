@@ -48,22 +48,16 @@ section#contact {
     }
   }
 }
-@media only screen and (max-width: 414px) {
-  section#contact h2 {
-    width: 280px;
-    margin-left: -140px;
-  }
-  
-  div.box {
-    width: 90%;
-    margin-top: 20px;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 0.9rem;
-  }
-  
-  div.box svg {
-    height: 25px;
-    margin-right: 10px;
+@media only screen and (max-width: 767px) {
+  section#contact {
+    h2 {
+      width: 100%;
+      margin-left: 0;
+      text-align: center;
+    }
+    
+    div.box {
+      opacity: 1;
+    }
   }
 }
