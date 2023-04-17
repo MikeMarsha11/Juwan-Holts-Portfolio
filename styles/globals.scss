@@ -13,6 +13,9 @@ body{
     color:#fff;
     overflow-x: hidden;
 }
+section{
+    overflow: hidden;
+}
 .center{
     max-width: 780px;
     margin: 0 auto;
@@ -27,9 +30,3 @@ h2{
     margin-bottom: 20px;
 }
 $gold: #FAC86B;
-@media only screen and (max-width: 480px) {
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-  }
